@@ -13,6 +13,11 @@ Oracle is a read-only technical advisor powered by GPT-5.2 with maximum reasonin
 
 It **cannot** edit files or make changes - it's purely advisory, making it safe to consult without risk of unintended modifications.
 
+<img width="1840" height="1195" alt="image" src="https://github.com/user-attachments/assets/bae3c4f6-8aa3-4a1c-b1ae-d9294015c8c0" />
+
+<img width="1840" height="1195" alt="image" src="https://github.com/user-attachments/assets/3781dcbf-05ce-47e0-9201-dc5d00e79e1b" />
+
+
 ## Installation
 
 ### Prerequisites
