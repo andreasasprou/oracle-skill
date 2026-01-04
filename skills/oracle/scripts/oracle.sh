@@ -3,11 +3,16 @@
 # Uses GPT-5.2 with xhigh reasoning effort
 # Read-only mode: can explore but cannot edit files
 
-set -euo pipefail
+set -eo pipefail
 
-# Use CLAUDE_PLUGIN_ROOT for plugin-relative paths
-# This variable is set by Claude Code when running plugin scripts
-SKILL_DIR="${CLAUDE_PLUGIN_ROOT}/skills/oracle"
+# Determine skill directory - use CLAUDE_PLUGIN_ROOT if set, otherwise derive from script location
+if [[ -n "${CLAUDE_PLUGIN_ROOT:-}" ]]; then
+    SKILL_DIR="${CLAUDE_PLUGIN_ROOT}/skills/oracle"
+else
+    # Fallback: derive from script location
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    SKILL_DIR="$(dirname "$SCRIPT_DIR")"
+fi
 
 # Read system prompt from file
 SYSTEM_PROMPT=$(cat "$SKILL_DIR/system-prompt.txt")
