@@ -1,0 +1,16 @@
+{
+  "name": "oracle-marketplace",
+  "owner": {
+    "name": "Andreas Asprou"
+  },
+  "metadata": {
+    "description": "Oracle skill for Claude Code - GPT-5.2 strategic technical advisor"
+  },
+  "plugins": [
+    {
+      "name": "oracle",
+      "source": "./",
+      "description": "GPT-5.2 strategic technical advisor with deep reasoning. Read-only access for architecture decisions, security analysis, and complex debugging."
+    }
+  ]
+}
